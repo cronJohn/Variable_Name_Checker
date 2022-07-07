@@ -1,5 +1,8 @@
 :root {
     color-scheme: dark light;
+    --footer-spacing: 20vh;
+    --footer-bg-light: #2b2a33;
+    --footer-bg-dark: #1c1b22;
 }
 *, *::before, *::after {
     box-sizing: border-box;
@@ -13,7 +16,7 @@
 }
 
 main {
-    height: 70vh;
+    height: calc(100vh - var(--footer-spacing));
 }
 
 .wrapper {
@@ -31,25 +34,35 @@ main {
 
 .flex {
     display: flex;
+}#1c1b22olid green;
 }
-
-/*                */
-
-
-.user-input {
-    width: 100%;
-    height: 3em;
-    text-align: center;
-    border-bottom: 10px solid green;
-}
-
 
 .dropdown {
     width: 15rem;
     text-align: center;
 }
 
+#mode {
+    width: 50px;
+}
 
 .footer__content {
+    font-family: 'Inter', sans-serif;
     text-align: center;
+    height: var(--footer-spacing);
+    background: var(--footer-bg-light);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer__icon {
+    width: 40px;
+    aspect-ratio: 1;
+}
+
+.social_icons img {
+    background-color: var(--footer-bg-dark);
+    border-radius: 50%;
 }

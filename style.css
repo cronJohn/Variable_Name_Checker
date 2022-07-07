@@ -34,16 +34,25 @@ main {
 
 .flex {
     display: flex;
-}#1c1b22olid green;
+}
+
+/*                */
+
+#user-input {
+    width: 100%;
+    height: 3em;
+    text-align: center;
+    border-bottom: 10px solid yellow;
 }
 
 .dropdown {
     width: 15rem;
-    text-align: center;
+    text-align: center; 
 }
 
 #mode {
     width: 50px;
+    border-radius: 10px;
 }
 
 .footer__content {

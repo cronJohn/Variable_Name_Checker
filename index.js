@@ -9,5 +9,4 @@ modeChanger.addEventListener("click", e => {
 // Change the border of the input based on its state
 userInput.addEventListener("input", e => {
     e.target.value === "" ? e.target.style.borderBottom = "10px solid yellow" : e.target.style.borderBottom = "10px solid green";
-    console.log(e.target.value);
 });

@@ -7,12 +7,12 @@
 *, *::before, *::after {
     box-sizing: border-box;
     font-size: 1.5rem;
-    outline: 1px solid red;
 }
 
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Inter', sans-serif;
 }
 
 main {
@@ -20,15 +20,34 @@ main {
 }
 
 .wrapper {
-    max-width: 500px;
+    max-width: 600px;
     margin: auto;
 }
 
+.mode-header {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2rem;
+    border-bottom: 3px solid rgb(116, 116, 116);
+}
+
 .main__top{
-    gap: 2rem;
     margin-bottom: 4.5rem;
 }
 
+.main__middle {
+    position: relative;
+    bottom: 0px;
+}
+
+.game-start[data-mode="checker"] {
+    display: none;
+}
+
+.game-start[data-mode="game"] {
+    display: block;
+    position: absolute;
+}
 
 /* Utility Classes */
 
@@ -50,13 +69,17 @@ main {
     text-align: center; 
 }
 
+.dropdown option {
+    font-size: 1rem;
+}
+
 #mode {
     width: 50px;
     border-radius: 10px;
+    margin: 0 auto;
 }
 
 .footer__content {
-    font-family: 'Inter', sans-serif;
     text-align: center;
     height: var(--footer-spacing);
     background: var(--footer-bg-light);

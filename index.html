@@ -16,18 +16,21 @@
 <body>
     <main class="flex">
         <div class="wrapper">
+            <h1 class="mode-header" data-mode="checker">Variable checker</h1>
             <section class="row main__top flex">
-                <select class="dropdown" name="languages" id="languages">
+                <select class="dropdown" name="languages" id="languages" title="Programming language list">
                     <option value="JavaScript">JavaScript</option>
                     <option value="Python">Python</option>
                     <option value="Rust">Rust</option>
                 </select>
-                <button id="mode">✅</button>
+                <button id="mode" title="Mode changer">✅</button>
             </section>
 
             <section class="main__middle">
                 <input id="user-input" placeholder="Variable name to check"></input>
             </section>
+
+            <button class="game-start" data-mode="checker">Start</button>
         </div>
     </main>
 

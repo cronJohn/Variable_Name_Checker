@@ -6,3 +6,19 @@ Another part of this includes a game that you can play to check your knowledge o
 
 # Acknowledgements
 A majority of the information used to make this website possible comes from [Mathias](https://mathiasbynens.be/) and his very own [variable name checker](https://mothereff.in/js-variables)
+
+# Todo
+- [ ] UI
+    - [ ] Start btn
+    - [ ] Settings modal
+    - [ ] During game
+    - [ ] Results screen modal
+- [ ] Game Modes
+    - [ ] Time
+    - [ ] Hearts
+    - Other?
+- [ ] Animation
+    - [ ] Transition from game and checker modes
+    - [ ] Settings modal transition
+    - [ ] Results screen modal transition
+- [ ] Add material UI?

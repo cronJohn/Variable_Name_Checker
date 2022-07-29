@@ -36,17 +36,30 @@ main {
 }
 
 .main__middle {
-    position: relative;
     bottom: 0px;
 }
 
-.game-start[data-mode="checker"] {
-    display: none;
+.mode-start {
+    transition: all .15s ease-in-out;
+    margin-top: 20px;
 }
 
-.game-start[data-mode="game"] {
-    display: block;
-    position: absolute;
+.mode-start[data-mode="checker"]{
+    transform: translateY(-20px);
+    opacity: 0;
+}
+
+.mode-start[data-mode="game"]{
+    transform: translateY(20px);
+    opacity: 100;
+}
+
+.game-start {
+    flex-grow: 7;
+}
+
+.settings {
+    flex-grow: 1;
 }
 
 /* Utility Classes */

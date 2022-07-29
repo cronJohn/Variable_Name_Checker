@@ -19,12 +19,12 @@ main {
     height: calc(100vh - var(--footer-spacing));
 }
 
-.wrapper {
+.main__wrapper {
     max-width: 600px;
     margin: auto;
 }
 
-.mode-header {
+.main__title {
     text-align: center;
     margin-bottom: 50px;
     font-size: 2rem;
@@ -39,26 +39,26 @@ main {
     bottom: 0px;
 }
 
-.mode-start {
+.main__bottom {
     transition: all .15s ease-in-out;
     margin-top: 20px;
 }
 
-.mode-start[data-mode="checker"]{
+.main__bottom[data-mode="checker"]{
     transform: translateY(-20px);
     opacity: 0;
 }
 
-.mode-start[data-mode="game"]{
+.main__bottom[data-mode="game"]{
     transform: translateY(20px);
     opacity: 100;
 }
 
-.game-start {
+.controller-left{
     flex-grow: 7;
 }
 
-.settings {
+.controller-right {
     flex-grow: 1;
 }
 
@@ -66,6 +66,10 @@ main {
 
 .flex {
     display: flex;
+}
+
+.col {
+    flex-direction: column;
 }
 
 /*                */
@@ -86,7 +90,11 @@ main {
     font-size: 1rem;
 }
 
-#mode {
+optgroup {
+    font-size: 1rem;
+}
+
+#mode-switcher {
     width: 50px;
     border-radius: 10px;
     margin: 0 auto;
@@ -112,15 +120,28 @@ main {
     border-radius: 50%;
 }
 
-#settings-modal {
+.modal__settings{
     margin: auto;
     padding: 20vh 10vw;
     position: relative;
 }
 
-#settings-modal::backdrop {
+.modal__settings::backdrop {
     background: rgba(0, 0, 0, 0.284);
     backdrop-filter: blur(2px);
+}
+
+.modal__settings .row {
+    margin-bottom: 20px;
+    gap: 30px;
+}
+
+.modal__settings input, .modal__settings select {
+    max-width: 200px;
+}
+
+[data-game_mode="time"] {
+    display: none;
 }
 
 .close-modal {

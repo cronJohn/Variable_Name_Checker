@@ -10,7 +10,7 @@ A majority of the information used to make this website possible comes from [Mat
 # Todo
 - [ ] UI
     - [x] Start btn
-    - [ ] Settings modal
+    - [x] Settings modal
     - [ ] During game
     - [ ] Results screen modal
 - [ ] Game Modes

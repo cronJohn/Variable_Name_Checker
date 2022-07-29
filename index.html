@@ -15,31 +15,53 @@
 </head>
 <body>
     <main class="flex">
-        <div class="wrapper">
-            <h1 class="mode-header" data-mode="checker">Variable checker</h1>
+        <div class="main__wrapper">
+            <h1 class="main__title" data-mode="checker">Variable checker</h1>
             <section class="row main__top flex">
-                <select class="dropdown" name="languages" id="languages" title="Programming language list">
+                <select class="dropdown" name="languages" title="Programming language list">
+                    <optgroup label="Choose programming language"></optgroup>
                     <option value="JavaScript">JavaScript</option>
                     <option value="Python">Python</option>
                     <option value="Rust">Rust</option>
                 </select>
-                <button id="mode" title="Mode changer">✅</button>
+                <button id="mode-switcher" title="Mode changer">✅</button>
             </section>
 
             <section class="main__middle">
-                <input id="user-input" placeholder="Variable name to check"></input>
+                <input id="user-input" placeholder="Variable name to check">
             </section>
 
-            <div class="mode-start flex" data-mode="checker">
-                <button class="game-start">Start</button>
-                <button class="settings">⚙️</button>
-            </div>
+            <section class="main__bottom flex" data-mode="checker">
+                <button class="controller-left">Start</button>
+                <button class="controller-right">⚙️</button>
+            </section>
         </div>
     </main>
 
-    <dialog id="settings-modal">
+    <dialog id="modal" class="modal__settings">
         <button class="close-modal">✖</button>
-        <h1>Are we in the modal yet?</h1>
+        <div class="flex col">
+            <div class="flex row">
+                <h2>Mode:</h2>
+                <select name="modes" class="modal__settings__select">
+                    <optgroup label="Choose mode"></optgroup>
+                    <option value="time">⏰ Time</option>
+                    <option value="lives">❤️ Lives</option>
+                </select>
+            </div>
+
+            <div class="flex row">
+                <h2>Time:</h2>
+                <input type="number" name="time">
+                <h2>secs</h2>
+            </div>
+            
+            <div class="flex row specific" data-game_mode="time">
+                <h2>Lives:</h2>
+                <input type="number" name="lives">
+            </div>
+            
+        </div>
     </dialog>
 
     <footer>
@@ -47,7 +69,7 @@
             <h2>My socials</h2>
             <div class="social_icons">
                 <a href="https://www.youtube.com/channel/UCRGklb6PkIStKpoMpneS61Q" target="_blank"><img class="footer__icon" src="img/YouTube_logo.svg" alt="YouTube logo"></a>
-                <a href="ht tps://github.com/cronJohn" target="_blank">  <img class="footer__icon" src="img/Github_logo.svg" alt="Github logo"></a>
+                <a href="https://github.com/cronJohn" target="_blank">  <img class="footer__icon" src="img/Github_logo.svg" alt="Github logo"></a>
                 <a href="https://twitter.com/cronJohn_" target="_blank"><img class="footer__icon" src="img/Twitter_logo.svg" alt="Twitter"> </a>
             </div>
         </section>

@@ -111,3 +111,25 @@ main {
     background-color: var(--footer-bg-dark);
     border-radius: 50%;
 }
+
+#settings-modal {
+    margin: auto;
+    padding: 20vh 10vw;
+    position: relative;
+}
+
+#settings-modal::backdrop {
+    background: rgba(0, 0, 0, 0.284);
+    backdrop-filter: blur(2px);
+}
+
+.close-modal {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    padding: 0;
+    right: 5px;
+    top: 5px;
+    
+}

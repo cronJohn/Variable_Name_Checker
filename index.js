@@ -1,13 +1,17 @@
-const modeChanger = document.getElementById("mode");
-const userInput = document.getElementById("user-input")
-var allModeDA = document.querySelectorAll("[data-mode]");
+const modeChanger = document.getElementById('mode');
+const userInput = document.getElementById('user-input')
+const settingsModal = document.querySelector('#settings-modal')
+const openSettings = document.querySelector('.settings')
+const closeSettings = document.querySelector('.close-modal')
+var allModeDA = document.querySelectorAll('[data-mode]');
+
 
 // On click, toggle the mode between game and checker
 modeChanger.addEventListener("click", e => {
     if (e.target.innerText == "✅") {
         e.target.innerText = "🕹️";
         allModeDA.forEach(element => {
-            if (element.classList.contains("mode-header")){
+            if (element.classList.contains('mode-header')){
                 element.innerText = 'Game time!'
             }
             element.dataset.mode = 'game'
@@ -17,16 +21,18 @@ modeChanger.addEventListener("click", e => {
     else {
         e.target.innerText = "✅";
         allModeDA.forEach(element => {
-            if (element.classList.contains("mode-header")) {
+            if (element.classList.contains('mode-header')) {
                 element.innerText = 'Variable checker'
             }
             element.dataset.mode = 'checker'
         });
     }
-
 });
 
 // Change the border of the input based on its state
-userInput.addEventListener("input", e => {
-    e.target.value === "" ? e.target.style.borderBottom = "10px solid yellow" : e.target.style.borderBottom = "10px solid green";
+userInput.addEventListener('input', e => {
+    e.target.value === '' ? e.target.style.borderBottom = '10px solid yellow' : e.target.style.borderBottom = '10px solid green';
 });
+
+openSettings.addEventListener('click', () => settingsModal.showModal())
+closeSettings.addEventListener('click', () => settingsModal.close())
